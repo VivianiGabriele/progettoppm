@@ -1,0 +1,507 @@
+:root{
+    --background-color-navbar: #1a3b70;
+    --background-color: #f7f7f7;
+    --background-article: #ffffff;
+    --category-color: black;
+    --autor-color: #555;
+    --shadow-article: 0 2px 6px rgba(0, 0, 0, 0.15);
+    --category-color-blue: #1a3b70;
+    --color-text-white: #ffffff;
+    --color-button-hover: #c7c7c7;
+    --most-read-color: #1a3b70;
+}
+
+.icon {
+    padding-bottom: 10px;
+}
+
+.border-dashed {
+    border-right: 2px dashed #999 !important;
+}
+
+
+
+
+.my-navbar {
+    height: 48px;
+    background-color: var(--background-color-navbar); /* Sostituisci con il colore che vuoi */
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+/* bordi tratteggiati navbar sx*/
+.navbar-nav .nav-item:not(:last-child) {
+    border-right: 3px dashed white;
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+/* Testo navbar sx*/
+.navbar-nav.flex-row .nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+/* Distanza iconee dx navbar*/
+.navbar .bi {
+    font-size: 14px;
+    gap: 0 20px; /* o 0.75rem */
+}
+/*Logo Navbar*/
+.nav-image {
+    aspect-ratio: 66/30;
+    width: 100%;
+    height: 35px;
+    object-fit: cover;
+    margin: 0; /* rimuove spazi indesiderati */
+}
+
+.btn-abbonati {
+    background-color: #ffeb00; /* Giallo */
+    color: black;              /* Testo nero */
+    padding: 0.5rem 1rem;      /* Spaziatura interna */
+    border: none;              /* Nessun bordo */
+    border-radius: 6px;        /* Bordi arrotondati */
+    font-weight: bold;         /* Testo in grassetto */
+    text-decoration: none;     /* Nessuna sottolineatura */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn-abbonati:hover {
+    background-color: #e6d500; /* Giallo leggermente più scuro al passaggio del mouse */
+}
+
+
+
+.container-topbar {
+    max-width: 1110px;
+    margin: 0 auto; /* centra il contenitore */
+    background-color: var(--background-color); /* colore di sfondo personalizzato */
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+/* Contenitore principale con larghezza fissa */
+.container-main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.container-category {
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 1110px;
+    width: 100%;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    padding: 30px 70px;
+    gap: 30px;
+    margin: 0 auto 0;
+}
+.container-category.grey {
+    background-color: var(--background-color);
+}
+
+.container-category.blue {
+    background-color: var(--background-color-navbar);
+    .section-title{
+        color: var(--color-text-white);
+    }
+    .icon{
+        color: var(--color-text-white);
+    }
+}
+
+
+
+/* Top */
+.font-logo {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 2rem;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.link-menu::before {
+    content: "/// ";
+    color: #003366;
+    font-weight: bold;
+}
+
+.menu-secondario a {
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+.linea-nera-spessa {
+    height: 3px;
+    background-color: black;
+    width: 100%;
+    margin: 0;
+}
+
+.linea-nera-sottile {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-top: 4px;
+}
+.btn-success:hover {
+    background-color: transparent;
+    color: #0f5132; /* colore verde scuro */
+    border: 2px solid #0f5132;
+}
+
+.btn-danger:hover {
+    background-color: transparent;
+    color: #842029; /* colore rosso scuro */
+    border: 2px solid #842029;
+}
+.link-menu {
+    color: black;
+    text-decoration: none;
+    padding: 4px 8px;
+    transition: all 0.2s ease;
+}
+
+.link-menu:hover {
+    background-color: var(--color-button-hover); /* grigio scuro */
+    color: white;
+    border-radius: 4px;
+}
+.logo-img {
+    aspect-ratio: 550/66; /* rapporto di aspetto */
+    height: 70px;
+    object-fit: contain; /* mantiene proporzioni */
+    display: block;
+    margin: 0 auto; /* per centrarla orizzontalmente */
+}
+
+
+
+
+
+
+/* PRIMO PIANO*/
+/* Layout flessibile */
+.row {
+    width: 102.5%;
+    box-sizing: content-box;
+    margin: auto;
+    position:relative;
+    align-content: center;
+    gap:0;
+}
+
+/* full width article prende 3/3 dello spazio*/
+.full-width-article {
+    flex: fit-content;
+    margin: 0 auto;
+}
+
+/* Primo piano prende 2/3 dello spazio */
+.main-article {
+    flex: 2;
+    margin: 0 auto;
+}
+
+/* Titoli di sezione */
+.section-title {
+    text-decoration-color: var(--category-color);
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+
+.click-effect {
+    text-decoration: none;
+    color: inherit;
+}
+
+.click-effect:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Articolo principale con sfondo bianco --- */
+.featured-article {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-article);
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    /* rimuovi padding generale */
+    position: relative;
+    border-radius: 3px;
+    box-shadow: var(--shadow-article);
+}
+/* Padding solo sui blocchi di testo */
+.featured-article .featured-text {
+    padding: 30px 30px 5px;
+}
+.featured-article .featured-title {
+    margin: 0 0 1rem;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: DM sans, sans-serif;
+}
+.featured-article .featured-author {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    color: var(--autor-color);
+    font-weight: bold;
+}
+/* Immagine full-width dentro il box bianco */
+.featured-article .featured-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 750/421;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Sezione Testo identificatore container logo-testo es > Primo piano */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spazio tra icona e testo */
+}
+.container-main .icon {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+
+/* SOTTO ARTICOLI PRIMO PIANO */
+.sub-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+.sub-article {
+    background-color: var(--background-article);
+    display: flex;
+    align-items: stretch; /* nessun padding verticale */
+    border-radius: 3px;
+    box-shadow: var(--shadow-article);
+}
+.sub-image {
+    aspect-ratio: 16/9;
+    width: 32.5%;
+    height: auto;
+    object-fit: cover;
+    margin: 0; /* rimuove spazi indesiderati */
+}
+.sub-text {
+    font-weight: bold;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sub-title {
+    font-size: 21px;
+    margin: 0;
+}
+.sub-author {
+    font-size: 0.9rem;
+    color: var(--autor-color);
+    margin-top: 5px;
+}
+
+
+
+/* ARTICOLI I PIU' LETTI*/
+/* I più letti prende 1/3 dello spazio */
+.most-read {
+    flex: 1;
+    margin:0;
+}
+
+.most-read-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+.most-read-item {
+    display: flex;
+    align-items: start;
+    background-color: var(--background-article);
+    padding: 0;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    box-shadow: var(--shadow-article);
+}
+/*banner pubblicitario in most read*/
+.most-read-item .promo-wrapper {
+    background-color: #e7e4e4;
+    padding: 30px;
+    position: relative;
+    border-radius: 8px;
+}
+.promo-image{
+    display: block;
+    width: 50%;
+    aspect-ratio: 4/4;
+    object-fit: cover;
+    margin-top: -30px;
+    align-self: flex-start;
+
+}
+
+.most-read-item .thumb {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: block;
+    width: 40%;
+    height: auto;
+}
+.most-read-item .info .category {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    color: var(--category-color);
+    margin-bottom: 0.25rem;
+
+}
+.most-read-item .info .title {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    margin: 0 3px 0 0;
+}
+.most-read .section-header .section-title {
+    color: var(--most-read-color);
+}
+
+.categories-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding-left: 8px;
+    scroll-snap-type: x mandatory;
+}
+.category-article {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    width: 220px;
+    height: 246.39px;
+    background-color: var(--background-article);
+    box-shadow: var(--shadow-article);
+    border-radius: 2px;
+    text-align: start;
+}
+
+.category-article img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.category-category {
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 16px;
+    padding-left: 8px;
+}
+
+.container-category .section-title{
+    text-decoration-color: var(--category-color);
+    margin: 0 0 0;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 0;
+    padding-bottom: 15px;
+}
+
+.category-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--autor-color);
+    padding-left: 8px;
+}
+
+
+@media (max-width: 1110px) {
+
+    .container-main {
+        max-width: 828px; /* Il contenitore si restringe */
+        padding: 0 30px;
+    }
+    .container-categories{
+        max-width: 828px; /* Il contenitore si restringe */
+        padding: 0 30px;
+    }
+    .row {
+        flex-direction: column; /* Manda "I più letti" a capo */
+    }
+    .main-article {
+        width: 100%;
+    }
+    .most-read {
+        width: 100%;
+    }
+}
+
+@media (max-width: 828px) {
+    .container-main {
+        max-width: 606px; /* Ulteriore restringimento */
+        padding: 0 15px;
+    }
+    .container-categories{
+        max-width: 606px; /* Ulteriore restringimento */
+        padding: 0 15px;
+    }
+    .main-article {
+        width: 100%;
+
+    }
+    .most-read {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 606px) {
+    .featured-article{
+        flex-direction: column-reverse;
+    }
+    .container-main {
+        width: 100%;
+        padding: 0 0;
+    }
+    .main-article {
+        width: 100%;
+        padding: 0 0;
+    }
+    .most-read {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- CONTAINER MENù -->
+
+<nav class="navbar navbar-expand-lg my-navbar py-1">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+        <!-- Hamburger e logo -->
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand text-white fw-bold" href="#">
+                <img src="https://placehold.co/66X30"  class="nav-image" alt="navbar-logo">
+            </a>
+        </div>
+
+        <!-- Menu sinistra -->
+        <div class="d-none d-lg-flex me-auto">
+            <!-- Menu sinistra allineato a sinistra -->
+            <div class="d-none d-lg-flex me-auto">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link text-white" href="#"><i class="bi bi-newspaper"></i>Edizione Digitale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link keep-on-mobile custom-link text-white" href="#"><i class="bi bi-envelope"></i>Newsletter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link keep-on-mobile custom-link text-white" href="#"><i class="bi bi-whatsapp text-white mx-2"></i>Segnala</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link keep-on-mobile custom-link text-white" href="#">Necrologie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link text-white" href="#">Accedi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Icone + bottone -->
+        <div class="d-flex align-items-center">
+            <i class="bi bi-youtube text-white mx-2"></i>
+            <i class="bi bi-facebook text-white mx-2"></i>
+            <i class="bi bi-instagram text-white mx-2"></i>
+            <i class="bi bi-twitter-x text-white mx-2"></i>
+            <a href="#" class="btn-abbonati ms-2">Abbonati</a>
+        </div>
+    </div>
+</nav>
+
+
+<!-- CONTAINER TOP -->
+<div class="container-topbar py-2" id="top-bar">
+    <div class="row align-items-center">
+        <!-- Meteo -->
+        <aside class="col-auto d-flex align-items-center">
+            <i class="bi bi-cloud-sun me-1" style="font-size: 1.3rem;"></i>
+            <strong>12°</strong>
+            <span class="ms-1 small">Mantova</span>
+        </aside>
+
+        <!-- Logo -->
+        <aside class="col text-center">
+            <img src="Img/logo.png" alt="GAZZETTA DI MANTOVA" class="logo-img">
+        </aside>
+
+        <!-- Data -->
+        <aside class="col-auto text-end">
+            <small class="fw-bold">sabato, 03 maggio 2025</small>
+        </aside>
+    </div>
+    <div class="linea-nera-spessa"></div>
+
+    <!-- Menu secondario -->
+    <div class="row mt-2">
+        <aside class="col d-flex flex-wrap align-items-center justify-content-start gap-3 menu-secondario">
+            <a href="#" class="btn btn-success btn-sm d-flex align-items-center">
+                <i class="bi bi-star-fill me-1"></i> Vota Pallone d’Oro
+            </a>
+            <a href="#" class="link-menu" href="#">Cronaca</a>
+            <a href="#" class="btn btn-danger btn-sm d-flex align-items-center">
+                <i class="bi bi-star-fill me-1"></i> Mantova Calcio
+            </a>
+            <a href="#" class="link-menu" href="#">Spettacoli</a>
+            <a href="#" class="link-menu" href="#">Cultura</a>
+            <a href="#" class="link-menu" href="#">Video</a>
+            <a href="#" class="link-menu" href="#">Italia</a>
+            <a href="#" class="link-menu" href="#">Cinema</a>
+        </aside>
+    </div>
+    <div class="linea-nera-sottile"></div>
+</div>
+
+<!-- PRIMA SEZIONE "PRIMO PIANO" -->
+<div class="container-main">
+    <div class="row">
+        <div class="full-width-article">
+            <article class="featured-article">
+                <div class="featured-text">
+                    <a href="#" class="click-effect featured-title">Articolo a full width, non sempre sul giornale compare, io ho preferito metterlo</a>
+                    <p class="featured-author">di Gabriele Viviani</p>
+                </div>
+
+                <img src="https://picsum.photos/1200" alt="Foto articolo" class="featured-image">
+            </article>
+        </div>
+        <!-- ARTICOLO PRINCIPALE -->
+        <div class="main-article">
+            <div class="section-header">
+                <i class="bi bi-caret-right-square-fill icon"></i>
+                <h2 class="section-title">Primo piano</h2>
+            </div>
+            <article class="featured-article">
+                <div class="featured-text">
+                    <a href="#" class="click-effect featured-title">Bomba inesplosa, oltre 800 persone da evacuare a Moglia di Sermide:
+                        ma molti non lasciano la zona rossa</a>
+                    <p class="featured-author">di Gabriele Viviani</p>
+                </div>
+
+                <img src="https://picsum.photos/1200" alt="Foto articolo" class="featured-image">
+            </article>
+
+            <div class="sub-articles">
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1201" alt="sotto articolo 1" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1100" alt="sotto articolo 2" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1300" alt="sotto articolo 3" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1000" alt="sotto articolo 4" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+        <!-- I più letti -->
+        <aside class="most-read">
+            <div class="promo-wrapper">
+                <div class="most-read-item">
+                    <img src="https://picsum.photos/500" alt="Banner promozionale" class="promo-image">
+                </div>
+            </div>
+            <div class="section-header">
+                <i class="bi bi-caret-right-square-fill icon"></i>
+                <h2 class="section-title">I più letti</h2>
+            </div>
+            <div class="section-header">
+                <ul class="most-read-list">
+                    <li class="most-read-item">
+                        <img src="https://picsum.photos/1110" alt="" class="thumb">
+                        <div class="info">
+                            <span class="category">La vicenda</span>
+                            <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        </div>
+                    </li>
+                    <li class="most-read-item">
+                        <img src="https://picsum.photos/1120" alt="" class="thumb">
+                        <div class="info">
+                            <span class="category">Incidente </span>
+                            <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a>
+                        </div>
+                    </li>
+                    <li class="most-read-item">
+                        <img src="https://picsum.photos/1130" alt="" class="thumb">
+                        <div class="info">
+                            <span class="category">La denuncia</span>
+                            <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula est vel purus
+                                dictum pharetra vel ac felis.</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</div>
+<div class="container-categories">
+    <div class="container-category blue">
+        <div class="row">
+            <div class="section-header">
+                <i class="bi bi-caret-right-square-fill icon"></i>
+                <h2 class="section-title">Le nostre esclusive</h2>
+            </div>
+            <div class="categories-list">
+                <article class="category-article">
+                    <img src="https://picsum.photos/400" alt="Articolo 1" class="img-fluid">
+                    <h4 class="category-category">IL DIBATTITO</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="category-article">
+                    <img src="https://picsum.photos/410" alt="Articolo 2" class="img-fluid">
+                    <h4 class="category-category">I DATI</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="category-article">
+                    <img src="https://picsum.photos/420" alt="Articolo 3" class="img-fluid">
+                    <h4 class="category-category">LA TRADIZIONE</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="category-article">
+                    <img src="https://picsum.photos/430" alt="Articolo 4" class="img-fluid">
+                    <h4 class="category-category">CALCIO SERIE B</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="container-category grey">
+        <div class="row">
+            <div class="section-header">
+                <i class="bi bi-caret-right-square-fill icon"></i>
+                <h2 class="section-title">In Evidenza</h2>
+            </div>
+            <div class="categories-list">
+                <article class="category-article">
+                    <img src="https://picsum.photos/440" alt="Articolo 1" class="img-fluid">
+                    <h4 class="category-category">IL DIBATTITO</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="category-article">
+                    <img src="https://picsum.photos/450" alt="Articolo 2" class="img-fluid">
+                    <h4 class="category-category">I DATI</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="category-article">
+                    <img src="https://picsum.photos/460" alt="Articolo 3" class="img-fluid">
+                    <h4 class="category-category">LA TRADIZIONE</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+                <article class="category-article">
+                    <img src="https://picsum.photos/470" alt="Articolo 4" class="img-fluid">
+                    <h4 class="category-category">CALCIO SERIE B</h4>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- ALTRE SEZIONI SCORREVOLI (Placeholder) -->
+<section class="bg-light py-4">
+    <div class="container">
+        <h4 class="mb-3">Ultime Notizie</h4>
+        <div class="d-flex overflow-auto gap-3">
+            <div class="card" style="min-width: 250px;">
+                <img src="thumb1.jpg" class="card-img-top-" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">Articolo 1</h6>
+                </div>
+            </div>
+            <div class="card" style="min-width: 250px;">
+                <img src="thumb2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">Articolo 2</h6>
+                </div>
+            </div>
+            <!-- Altri articoli... -->
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2025 Gazzetta di Mantova - Tutti i diritti riservati</p>
+    </div>
+</footer>
+
+
+
+
+
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
