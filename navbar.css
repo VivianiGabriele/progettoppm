@@ -1,0 +1,61 @@
+/*Navbar*/
+
+.my-navbar {
+    height: 48px;
+    background-color: var(--background-color-navbar); /* Sostituisci con il colore che vuoi */
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+/* bordi tratteggiati navbar sx*/
+.navbar-nav .nav-item:not(:last-child) {
+    border-right: 3px dashed white;
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+/* Testo navbar sx*/
+.navbar-nav.flex-row .nav-link {
+    color: var(--text-color-navbar);
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 15px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+/* Distanza iconee dx navbar*/
+.navbar .bi {
+    font-size: 14px;
+    gap: 0 20px; /* o 0.75rem */
+}
+/*Logo Navbar*/
+.nav-image {
+    aspect-ratio: 66/30;
+    width: 100%;
+    height: 35px;
+    object-fit: cover;
+    margin: 0; /* rimuove spazi indesiderati */
+}
+
+.btn-abbonati {
+    background-color: #ffeb00; /* Giallo */
+    color: black;              /* Testo nero */
+    padding: 0.5rem 1rem;      /* Spaziatura interna */
+    border: none;              /* Nessun bordo */
+    border-radius: 6px;        /* Bordi arrotondati */
+    font-weight: bold;         /* Testo in grassetto */
+    text-decoration: none;     /* Nessuna sottolineatura */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn-abbonati:hover {
+    background-color: #e6d500; /* Giallo leggermente più scuro al passaggio del mouse */
+}
+
+
+@media (max-width: 606px) {
+    .my-navbar{
+        width:100%;
+    }
+}

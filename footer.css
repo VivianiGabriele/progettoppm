@@ -1,0 +1,121 @@
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 4px solid black;
+    border-bottom: 1px solid #ccc;
+    margin-top:20px;
+}
+
+.footer-left ul,
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin: 0;
+}
+
+.footer-left ul li,
+.footer-right ul li {
+    margin: 0;
+}
+
+.footer-left ul li a,
+.footer-right ul li a {
+    color: var(--text-color-footer);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: stretch;
+}
+
+.footer-right ul li a i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.abbonati {
+    background-color: #007BFF;
+    color: white !important;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.abbonati:hover {
+    background-color: #073e7c;
+}
+
+/* Placeholder blocchi ADV */
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    max-height: calc(150px * 2 + 15px); /* 2 righe max + gap */
+    padding: 20px 0;
+}
+
+
+.footer-item {
+    width: 60px; /* metà di 150px */
+    flex: 0 0 auto;
+;
+}
+
+.footer-item img {
+    width: 100%; /* occupa tutto il blocco */
+    height: auto;
+    display: block;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footer-left ul,
+    .footer-right ul {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    .footer-left ul li,
+    .footer-right ul li {
+        width: auto;
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-grid {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-info p {
+        font-size: 12px;
+    }
+}

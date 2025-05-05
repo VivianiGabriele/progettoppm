@@ -7,9 +7,16 @@
     --shadow-article: 0 2px 6px rgba(0, 0, 0, 0.15);
     --category-color-blue: #1a3b70;
     --color-text-white: #ffffff;
+    --color-text-black: #000000;
     --color-button-hover: #c7c7c7;
     --most-read-color: #1a3b70;
+    --color-box-adv: #e7e4e4;
+    --color-video-background: #00023D;
+    --text-color-navbar: #073e7c;
+    --other-category-text: black;
+    --text-color-footer:#073e7c;
 }
+
 
 .icon {
     padding-bottom: 10px;
@@ -20,68 +27,26 @@
 }
 
 
-
-
-.my-navbar {
-    height: 48px;
-    background-color: var(--background-color-navbar); /* Sostituisci con il colore che vuoi */
-}
-.nav-link:hover {
-    text-decoration: underline;
-}
-/* bordi tratteggiati navbar sx*/
-.navbar-nav .nav-item:not(:last-child) {
-    border-right: 3px dashed white;
-    margin-right: 1rem;
-    padding-right: 1rem;
-}
-/* Testo navbar sx*/
-.navbar-nav.flex-row .nav-link {
-    font-weight: bold;
-    font-size: 14px;
-    padding-bottom: 15px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-/* Distanza iconee dx navbar*/
-.navbar .bi {
-    font-size: 14px;
-    gap: 0 20px; /* o 0.75rem */
-}
-/*Logo Navbar*/
-.nav-image {
-    aspect-ratio: 66/30;
-    width: 100%;
-    height: 35px;
-    object-fit: cover;
-    margin: 0; /* rimuove spazi indesiderati */
-}
-
-.btn-abbonati {
-    background-color: #ffeb00; /* Giallo */
-    color: black;              /* Testo nero */
-    padding: 0.5rem 1rem;      /* Spaziatura interna */
-    border: none;              /* Nessun bordo */
-    border-radius: 6px;        /* Bordi arrotondati */
-    font-weight: bold;         /* Testo in grassetto */
-    text-decoration: none;     /* Nessuna sottolineatura */
-    display: inline-block;
-    transition: background-color 0.3s;
-}
-
-.btn-abbonati:hover {
-    background-color: #e6d500; /* Giallo leggermente più scuro al passaggio del mouse */
-}
-
-
-
 .container-topbar {
     max-width: 1110px;
-    margin: 0 auto; /* centra il contenitore */
     background-color: var(--background-color); /* colore di sfondo personalizzato */
     padding-left: 70px;
     padding-right: 70px;
+    margin: 40px auto 0;
 }
+
+/*TOP*/
+.container-topbar .row.top{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
 
 /* Contenitore principale con larghezza fissa */
 .container-main {
@@ -96,16 +61,24 @@
     padding-right: 70px;
 }
 
+.container-categories {
+    position: relative;
+    width: 100%;
+    max-width: 1110px; /* Impostiamo la larghezza massima come .container-main */
+    margin: 0 auto; /* Centra il contenitore */
+    padding-left: 0px; /* Padding a sinistra come container-main */
+    padding-right: 0px; /* Padding a destra come container-main */
+}
+
 .container-category {
     display:flex;
     flex-wrap: wrap;
     max-width: 1110px;
     width: 100%;
     background-color: var(--background-color);
-    box-sizing: border-box;
     padding: 30px 70px;
     gap: 30px;
-    margin: 0 auto 0;
+    margin: 0 auto;
 }
 .container-category.grey {
     background-color: var(--background-color);
@@ -120,10 +93,16 @@
         color: var(--color-text-white);
     }
 }
+.container-category.grey {
+    background-color: var(--background-color-navbar);
+    .section-title{
+        color: var(--color-text-black);
+    }
+    .icon{
+        color: var(--color-text-white);
+    }
+}
 
-
-
-/* Top */
 .font-logo {
     font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 2rem;
@@ -134,18 +113,72 @@
     color: #333;
     font-weight: 600;
     font-size: 0.9rem;
+    display: inline-flex; /* Usa inline-flex per allineare orizzontalmente */
+    align-items: center;  /* Allinea gli elementi verticalmente */
 }
 
 .link-menu::before {
     content: "/// ";
     color: #003366;
     font-weight: bold;
+    margin-right: 8px; /* Aggiungi uno spazio tra i simboli e il testo */
+    display: inline;  /* Assicurati che i simboli siano affiancati al testo */
+}
+
+.scroll-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden; /* Rimuove la barra di scorrimento */
+}
+
+.overflow-scroll-wrapper {
+    overflow-x: hidden; /* Assicura che non ci sia overflow orizzontale */
+    overflow-y: hidden; /* Assicura che non ci sia overflow verticale */
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: 100%; /* Assicura che l'elemento non ecceda la larghezza della finestra */
+    height: 100%; /* Evita che ecceda anche in altezza */
+}
+
+/* Nasconde la barra di scorrimento orizzontale (solo visibile) */
+.overflow-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Rimuove la parte visibile della scrollbar */
+}
+
+/* Barra di scorrimento su Firefox */
+.overflow-scroll-wrapper {
+    scrollbar-width: none; /* Rimuove la scrollbar orizzontale su Firefox */
+}
+
+/* Permettere al menu di andare a capo su schermi piccoli */
+.menu-secondario {
+    display: flex;
+    flex-wrap: wrap;  /* Consente di andare a capo */
+    gap: 10px;
 }
 
 .menu-secondario a {
-    white-space: nowrap;
-    font-size: 0.85rem;
+    white-space: normal; /* Permette al testo di andare a capo */
+    padding-top:5px;
+    padding-bottom:5px;
 }
+
+/* Freccia destra */
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
 .linea-nera-spessa {
     height: 3px;
     background-color: black;
@@ -159,6 +192,7 @@
     width: 100%;
     margin-top: 4px;
 }
+
 .btn-success:hover {
     background-color: transparent;
     color: #0f5132; /* colore verde scuro */
@@ -353,21 +387,35 @@
     box-shadow: var(--shadow-article);
 }
 /*banner pubblicitario in most read*/
-.most-read-item .promo-wrapper {
-    background-color: #e7e4e4;
-    padding: 30px;
-    position: relative;
-    border-radius: 8px;
+.most-read-adv {
+    background-color: var(--color-box-adv);
+    margin-top: 50px;
+    margin-bottom: 0;
+    border-radius: 3px;
+    margin-left: 10px;
+    width: auto;
+    height: 207px; /* aumentata rispetto a prima */
+    overflow: visible; /* importante per mostrare la parte traslata */
+    padding-bottom: 0;
 }
-.promo-image{
-    display: block;
-    width: 50%;
-    aspect-ratio: 4/4;
-    object-fit: cover;
-    margin-top: -30px;
-    align-self: flex-start;
 
+.most-read-adv-inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
 }
+
+.adv-image {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-30px);
+    display: block;
+}
+
+
+
 
 .most-read-item .thumb {
     aspect-ratio: 16/9;
@@ -395,6 +443,7 @@
 }
 .most-read .section-header .section-title {
     color: var(--most-read-color);
+    margin-left: 10px;
 }
 
 .categories-list {
@@ -425,7 +474,6 @@
 }
 
 .category-category {
-    text-transform: uppercase;
     font-size: 13px;
     margin-bottom: 16px;
     padding-left: 8px;
@@ -439,13 +487,80 @@
     padding-top: 0;
     padding-bottom: 15px;
 }
+.container-category.articoli-misto .section-header .section-title {
+    color: var(--other-category-text);
 
+}
+.container-category.articoli-misto .section-header {
+    .icon{
+        color: var(--other-category-text);
+    }
+}
+.container-category .section-header {
+    .icon{
+        color: white;
+    }
+}
+.container-category .section-header .section-title {
+    color: white;
+}
 .category-title {
     font-size: 17px;
     font-weight: bold;
     color: var(--autor-color);
     padding-left: 8px;
 }
+.container-category.articoli-misto .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spazio tra gli articoli */
+}
+
+.container-category.articoli-misto .article-col {
+    flex: 0 0 calc(33.333% - 13.33px); /* 3 colonne */
+    max-width: calc(33.333% - 13.33px);
+}
+
+.container-category.video {
+    background-color: var(--color-video-background);
+    margin-top: 0px;
+    width:100%;
+}
+.video-thumb {
+    position: relative;
+}
+.video-article .category-title {
+    padding-top: 10px;
+
+}
+.video-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.play-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+.video-duration {
+    display: block;
+    padding-left: 10px;
+    font-size: 0.875rem;
+    color: gray;
+}
+.most-read-item.custom-article{
+    .video-duration{
+        padding-left: 0;
+    }
+}
+
+
+
 
 
 @media (max-width: 1110px) {
@@ -454,12 +569,27 @@
         max-width: 828px; /* Il contenitore si restringe */
         padding: 0 30px;
     }
-    .container-categories{
-        max-width: 828px; /* Il contenitore si restringe */
+    .container-topbar{
+        max-width: 828px;
         padding: 0 30px;
+    }
+    .container-categories{
+        max-width: 828px;
+        padding: 0 0px;
+    }
+    .container-category{
+        max-width: 828px;
+        padding: 0 30px;
+    }
+    .container-category.articoli-misto .article-col {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
     .row {
         flex-direction: column; /* Manda "I più letti" a capo */
+    }
+    .logo-img {
+        height: 50px; /* o qualsiasi valore tu preferisca */
     }
     .main-article {
         width: 100%;
@@ -467,16 +597,35 @@
     .most-read {
         width: 100%;
     }
-}
+    .menu-secondario {
+        display: flex;
+        flex-wrap: wrap;  /* Gli elementi vanno a capo su schermi piccoli */
+        justify-content: center;
+    }
 
+
+
+}
 @media (max-width: 828px) {
     .container-main {
         max-width: 606px; /* Ulteriore restringimento */
         padding: 0 15px;
     }
-    .container-categories{
-        max-width: 606px; /* Ulteriore restringimento */
+    .container-topbar{
+        max-width: 606px;
         padding: 0 15px;
+    }
+    .container-categories{
+        max-width: 606px;
+        padding: 0 0px;
+    }
+    .container-category{
+        max-width: 606px;
+        padding: 0 15px;
+    }
+    .container-category.articoli-misto .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
     .main-article {
         width: 100%;
@@ -486,15 +635,59 @@
         width: 100%;
 
     }
-}
+    .scroll-wrapper {
+        overflow: hidden;
+        position: relative;
+    }
 
+    .overflow-scroll-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-left: 60px;
+        padding-right: 8px;
+        margin: 0;
+    }
+
+    .overflow-scroll-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu-secondario {
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
+
+    .menu-secondario a {
+        flex-shrink: 0;
+    }
+
+
+}
+@media (min-width: 828px) {
+    .scroll-arrow {
+        display: none; /* Nasconde la freccia su desktop */
+    }
+}
 @media (max-width: 606px) {
     .featured-article{
         flex-direction: column-reverse;
     }
     .container-main {
         width: 100%;
-        padding: 0 0;
+        padding: 0 0 10px 0;
+        margin-left: 0px;
+    }
+    .container-categories{
+        width: 100%;
+        padding: 0 0 20px;
+        margin-left: 0px;
+    }
+    .container-category{
+        padding-bottom: 10px;
+
     }
     .main-article {
         width: 100%;
@@ -502,6 +695,40 @@
     }
     .most-read {
         width: 100%;
+    }
+    .container-topbar .row.top {
+        display: none;
+    }
+    .container-topbar .linea-nera-spessa {
+        display: none;
+    }
+    .scroll-wrapper {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .overflow-scroll-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        padding-left: 60px;
+        padding-right: 8px;
+        margin: 0;
+    }
+
+    .overflow-scroll-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu-secondario {
+        display: inline-flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+        margin: 10px 0 0;
+    }
+
+    .menu-secondario a {
+        flex-shrink: 0;
     }
 }
 

@@ -5,11 +5,13 @@
     <script src="js/html5shiv.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Viviani Gazzettino</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
@@ -17,13 +19,13 @@
 
 <!-- CONTAINER MENù -->
 
-<nav class="navbar navbar-expand-lg my-navbar py-1">
+<nav class="navbar navbar-expand-lg my-navbar py-1 fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
         <!-- Hamburger e logo -->
         <div class="d-flex align-items-center">
             <a class="navbar-brand text-white fw-bold" href="#">
-                <img src="https://placehold.co/66X30"  class="nav-image" alt="navbar-logo">
+                <img src="https://placehold.co/66X30?text=Logo"  class="nav-image" alt="navbar-logo">
             </a>
         </div>
 
@@ -65,44 +67,51 @@
 
 <!-- CONTAINER TOP -->
 <div class="container-topbar py-2" id="top-bar">
-    <div class="row align-items-center">
+    <div class="row top">
         <!-- Meteo -->
         <aside class="col-auto d-flex align-items-center">
             <i class="bi bi-cloud-sun me-1" style="font-size: 1.3rem;"></i>
             <strong>12°</strong>
-            <span class="ms-1 small">Mantova</span>
         </aside>
 
         <!-- Logo -->
         <aside class="col text-center">
-            <img src="Img/logo.png" alt="GAZZETTA DI MANTOVA" class="logo-img">
+            <img src="Img/logo.PNG" alt="GAZZETTA DI MANTOVA" class="logo-img">
         </aside>
 
         <!-- Data -->
         <aside class="col-auto text-end">
-            <small class="fw-bold">sabato, 03 maggio 2025</small>
+            <small class="fw-bold">05/05/2025</small>
         </aside>
     </div>
     <div class="linea-nera-spessa"></div>
 
     <!-- Menu secondario -->
-    <div class="row mt-2">
-        <aside class="col d-flex flex-wrap align-items-center justify-content-start gap-3 menu-secondario">
-            <a href="#" class="btn btn-success btn-sm d-flex align-items-center">
-                <i class="bi bi-star-fill me-1"></i> Vota Pallone d’Oro
-            </a>
-            <a href="#" class="link-menu" href="#">Cronaca</a>
-            <a href="#" class="btn btn-danger btn-sm d-flex align-items-center">
-                <i class="bi bi-star-fill me-1"></i> Mantova Calcio
-            </a>
-            <a href="#" class="link-menu" href="#">Spettacoli</a>
-            <a href="#" class="link-menu" href="#">Cultura</a>
-            <a href="#" class="link-menu" href="#">Video</a>
-            <a href="#" class="link-menu" href="#">Italia</a>
-            <a href="#" class="link-menu" href="#">Cinema</a>
-        </aside>
+    <div class="scroll-wrapper position-relative">
+        <div class="overflow-scroll-wrapper">
+            <div class="menu-secondario d-inline-flex align-items-center gap-3">
+                <a href="#" class="btn btn-success btn-sm d-flex align-items-center flex-shrink-0">
+                    <i class="bi bi-star-fill me-1"></i> Vota Pallone d’Oro
+                </a>
+                <a href="#" class="link-menu">Cronaca</a>
+                <a href="#" class="btn btn-danger btn-sm d-flex align-items-center flex-shrink-0">
+                    <i class="bi bi-star-fill me-1"></i> Mantova Calcio
+                </a>
+                <a href="#" class="link-menu">Spettacoli</a>
+                <a href="#" class="link-menu">Cultura</a>
+                <a href="#" class="link-menu">Video</a>
+                <a href="#" class="link-menu">Italia</a>
+                <a href="#" class="link-menu">Cinema</a>
+            </div>
+        </div>
+
+        <!-- Freccia destra -->
+        <button class="scroll-arrow" id="scroll-right">
+            <i class="bi bi-chevron-right"></i>
+        </button>
     </div>
     <div class="linea-nera-sottile"></div>
+
 </div>
 
 <!-- PRIMA SEZIONE "PRIMO PIANO" -->
@@ -111,11 +120,12 @@
         <div class="full-width-article">
             <article class="featured-article">
                 <div class="featured-text">
-                    <a href="#" class="click-effect featured-title">Articolo a full width, non sempre sul giornale compare, io ho preferito metterlo</a>
+                    <a href="#" class="click-effect featured-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula est vel purus
+                        dictum pharetra vel ac felis.</a>
                     <p class="featured-author">di Gabriele Viviani</p>
                 </div>
 
-                <img src="https://picsum.photos/1200" alt="Foto articolo" class="featured-image">
+                <img src="https://picsum.photos/1300" alt="Foto articolo" class="featured-image">
             </article>
         </div>
         <!-- ARTICOLO PRINCIPALE -->
@@ -168,13 +178,13 @@
         </div>
         <!-- I più letti -->
         <aside class="most-read">
-            <div class="promo-wrapper">
-                <div class="most-read-item">
-                    <img src="https://picsum.photos/500" alt="Banner promozionale" class="promo-image">
+            <div class="most-read-adv">
+                <div class="most-read-adv-inner">
+                    <img src="https://placehold.co/500X500?text=ADV" alt="Pubblicità ADV" class="adv-image">
                 </div>
             </div>
             <div class="section-header">
-                <i class="bi bi-caret-right-square-fill icon"></i>
+
                 <h2 class="section-title">I più letti</h2>
             </div>
             <div class="section-header">
@@ -203,9 +213,15 @@
                     </li>
                 </ul>
             </div>
+            <div class="most-read-adv">
+                <div class="most-read-adv-inner">
+                    <img src="https://placehold.co/500X500?text=ADV" alt="Pubblicità ADV" class="adv-image">
+                </div>
+            </div>
         </aside>
     </div>
 </div>
+
 <div class="container-categories">
     <div class="container-category blue">
         <div class="row">
@@ -270,41 +286,283 @@
 </div>
 
 
-
-
-
-<!-- ALTRE SEZIONI SCORREVOLI (Placeholder) -->
-<section class="bg-light py-4">
-    <div class="container">
-        <h4 class="mb-3">Ultime Notizie</h4>
-        <div class="d-flex overflow-auto gap-3">
-            <div class="card" style="min-width: 250px;">
-                <img src="thumb1.jpg" class="card-img-top-" alt="...">
-                <div class="card-body">
-                    <h6 class="card-title">Articolo 1</h6>
-                </div>
+<div class="container-categories">
+    <div class="container-category articoli-misto">
+        <div class="row">
+            <div class="section-header">
+                <i class="bi bi-caret-right-square-fill icon"></i>
+                <h2 class="section-title">Le altre notizie</h2>
             </div>
-            <div class="card" style="min-width: 250px;">
-                <img src="thumb2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h6 class="card-title">Articolo 2</h6>
-                </div>
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
             </div>
-            <!-- Altri articoli... -->
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
+            </div>
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row">
+            <div class="article-col">
+                    <article class="most-read-item custom-article d-flex">
+                        <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                        <div class="info">
+                            <span class="category">Cultura</span>
+                            <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                                convallis nec ligula.</a>
+                            <span class="video-duration">04/05/2025</span>
+                        </div>
+                    </article>
+            </div>
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
+            </div>
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="row">
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
+            </div>
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
+            </div>
+            <div class="article-col">
+                <article class="most-read-item custom-article d-flex">
+                    <img src="https://picsum.photos/120" alt="Articolo" class="thumb">
+                    <div class="info">
+                        <span class="category">Cultura</span>
+                        <a href="#" class="click-effect title">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed,
+                            convallis nec ligula.</a>
+                        <span class="video-duration">04/05/2025</span>
+                    </div>
+                </article>
+            </div>
         </div>
     </div>
-</section>
+</div>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white py-4 mt-5">
-    <div class="container text-center">
-        <p class="mb-0">© 2025 Gazzetta di Mantova - Tutti i diritti riservati</p>
+<!-- articoli larghi a sx e ADV a destra, struttura molto simile a Container-main-->
+<div class="container-main">
+    <div class="row">
+        <!-- articoli sinistra larghi -->
+        <div class="main-article">
+            <div class="section-header">
+                <i class="bi bi-caret-right-square-fill icon"></i>
+                <h2 class="section-title">Cronaca</h2>
+            </div>
+            <div class="sub-articles">
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1201" alt="sotto articolo 1" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1100" alt="sotto articolo 2" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1300" alt="sotto articolo 3" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+                <article class="sub-article">
+                    <img src="https://picsum.photos/1000" alt="sotto articolo 4" class="sub-image">
+                    <div class="sub-text">
+                        <a href="#" class="click-effect sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                        <p class="sub-author">di Nome Autore</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+        <!-- adv destra -->
+        <aside class="most-read">
+            <div class="most-read-adv">
+                <div class="most-read-adv-inner">
+                    <img src="https://placehold.co/500X500?text=ADV" alt="Pubblicità ADV" class="adv-image">
+                </div>
+            </div>
+            <div class="most-read-adv">
+                <div class="most-read-adv-inner">
+                    <img src="https://placehold.co/500X500?text=ADV" alt="Pubblicità ADV" class="adv-image">
+                </div>
+            </div>
+        </aside>
     </div>
-</footer>
+</div>
+
+<div class="container-categories">
+    <div class="container-category video">
+        <div class="row">
+            <div class="section-header">
+                <i class="bi bi-caret-right-square-fill icon"></i>
+                <h2 class="section-title">I nostri video</h2>
+            </div>
+            <div class="categories-list">
+                <article class="category-article video-article">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/400" alt="Video 1" class="img-fluid">
+                        <i class="bi bi-play-circle-fill play-icon"></i>
+                    </div>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <span class="video-duration">3:12</span>
+                </article>
+                <article class="category-article video-article">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/410" alt="Video 2" class="img-fluid">
+                        <i class="bi bi-play-circle-fill play-icon"></i>
+                    </div>
+                    <p class="category-title">Consectetur adipiscing elit. Proin eu.</p>
+                    <span class="video-duration">5:47</span>
+                </article>
+                <article class="category-article video-article">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/400" alt="Video 1" class="img-fluid">
+                        <i class="bi bi-play-circle-fill play-icon"></i>
+                    </div>
+                    <p class="category-title">Lorem ipsum dolor sit amet, consectetur.</p>
+                    <span class="video-duration">3:12</span>
+                </article>
+                <article class="category-article video-article">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/410" alt="Video 2" class="img-fluid">
+                        <i class="bi bi-play-circle-fill play-icon"></i>
+                    </div>
+                    <p class="category-title">Consectetur adipiscing elit. Proin eu.</p>
+                    <span class="video-duration">5:47</span>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-main">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-left">
+                    <ul>
+                        <li><a href="#">Pubblicità</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookie</a></li>
+                        <li><a href="#">Consensi</a></li>
+                        <li><a href="#">Contatti</a></li>
+                        <li><a href="#">Chi siamo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <ul>
+                        <li><a href="#"><i class="bi bi-whatsapp mx-2"></i></a></li>
+                        <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="#">Necrologie</a></li>
+                        <li><a href="#" class="abbonati">Abbonati</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-grid">
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder" class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200x200?text=ADV" alt="Placeholder" class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                    <div class="footer-item"><img src="https://placehold.co/200X200?text=ADV" alt="Placeholder"class="group-img"></div>
+                </div>
+                <div class="footer-info">
+                    <p>Gazzetta Viviani Della Robbia Gabriele, lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ligula lectus, rhoncus sed fermentum sed</p>
+                    <p>Copyright © 2025 – Tutti i diritti riservati</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 
 
-
-
+<script>
+document.getElementById('scroll-right').addEventListener('click', function () {
+const menu = document.querySelector('.overflow-scroll-wrapper');
+menu.scrollBy({ left: 200, behavior: 'smooth' });
+});
+</script>
 
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
