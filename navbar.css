@@ -59,7 +59,7 @@
     position: fixed;
     top: 48px; /* sotto la navbar */
     left: 0;
-    width: 80vw; /* 👈 80% della larghezza dello schermo */
+    width: 80vw; /* 80% della larghezza dello schermo */
     height: calc(100vh - 48px);
     background-color: #0c1a32;
     color: white;

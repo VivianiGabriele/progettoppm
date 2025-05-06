@@ -18,10 +18,10 @@
     --text-color-footer:#073e7c;
     --color-text-soft-dark: #302a2a;
     --abbonati-btn-background-color: #ffeb00;
-    --font-navbar: sans-serif;
-    --font-title:'Playfair Display', serif;
-    --font-title-most-read: 'DM Sans', sans-serif;
-    --font-title-category: 'DM Sans', sans-serif;
+    --font-navbar: sans-serif, Arial, sans-serif;
+    --font-title:'Playfair Display', serif, Arial, sans-serif;
+    --font-title-most-read: 'DM Sans', sans-serif, Arial, sans-serif;
+    --font-title-category: 'DM Sans', sans-serif, Arial, sans-serif;
 }
 
 
@@ -33,24 +33,32 @@
     border-right: 2px dashed #999 !important;
 }
 
-
+/*TOP*/
 .container-topbar {
     max-width: 1110px;
     background-color: var(--background-color); /* colore di sfondo personalizzato */
     padding-left: 70px;
     padding-right: 70px;
-    margin: 40px auto 0;
+    margin: 20px auto 0;
 }
-
-/*TOP*/
+.container-topbar .row .bi{
+    font-size: 1.8rem;
+}
+.container-topbar .row .text-top-sx{
+    margin-top:10px;
+}
 .container-topbar .row.top{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: end;
     align-items: flex-end;
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.container-topbar .row .col {
+    align-items: end;
+}
+
 
 
 
@@ -589,6 +597,14 @@
         max-width: 828px;
         padding: 0 30px;
     }
+    .container-topbar .row{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     .container-categories{
         max-width: 828px;
         padding: 0 0px;
@@ -601,7 +617,13 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .row {
+    .container-topbar .row.top {
+        flex-direction: row; /* Manda "I più letti" a capo */
+    }
+    .container-topbar .row .mantova {
+        display: none;
+    }
+    .most-read-item.row {
         flex-direction: column; /* Manda "I più letti" a capo */
     }
     .logo-img {
@@ -630,6 +652,12 @@
     .container-topbar{
         max-width: 606px;
         padding: 0 15px;
+    }
+    .container-topbar .row.top{
+        display:none;
+    }
+    .container-topbar .linea-nera-spessa {
+        display: none;
     }
     .container-categories{
         max-width: 606px;
