@@ -1,61 +1,262 @@
-/*Navbar*/
-
-.my-navbar {
-    height: 48px;
-    background-color: var(--background-color-navbar); /* Sostituisci con il colore che vuoi */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*MENU*/
+/* Hamburger menu */
+.hamburger-menu {
+    display: none;
+    color: white;
+    font-size: 24px;
+    padding: 0 1rem;
+    cursor: pointer;
 }
 
-.nav-link:hover {
+/* Menu mobile */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 48px; /* altezza navbar */
+    left: 0;
+    width: 100%;
+    background-color: #0c1a32;
+    color: white;
+    padding: 2rem;
+    z-index: 9998;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.mobile-menu .menu-column {
+    flex: 1 1 200px; /* base 200px, si adatta se meno spazio */
+    min-width: 200px;
+}
+
+.mobile-menu .menu-column strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.mobile-menu .menu-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu .menu-column ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.2rem 0;
+}
+
+.mobile-menu .menu-column ul li a:hover {
     text-decoration: underline;
 }
-/* bordi tratteggiati navbar sx*/
-.navbar-nav .nav-item:not(:last-child) {
-    border-right: 3px dashed white;
-    margin-right: 1rem;
-    padding-right: 1rem;
-}
-/* Testo navbar sx*/
-.navbar-nav.flex-row .nav-link {
-    color: var(--text-color-navbar);
-    font-weight: bold;
-    font-size: 14px;
-    padding-bottom: 15px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-/* Distanza iconee dx navbar*/
-.navbar .bi {
-    font-size: 14px;
-    gap: 0 20px; /* o 0.75rem */
-}
-/*Logo Navbar*/
-.nav-image {
-    aspect-ratio: 66/30;
-    width: 100%;
-    height: 35px;
-    object-fit: cover;
-    margin: 0; /* rimuove spazi indesiderati */
+/* Inizialmente il menu mobile è nascosto fuori dallo schermo */
+.mobile-menu {
+    position: fixed;
+    top: 48px; /* sotto la navbar */
+    left: 0;
+    width: 80vw; /* 👈 80% della larghezza dello schermo */
+    height: calc(100vh - 48px);
+    background-color: #0c1a32;
+    color: white;
+    padding: 2rem;
+    z-index: 9998;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    overflow-y: auto;
 }
 
+.mobile-menu.active {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/*NAVBAR*/
+.custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    padding: 0 0;
+    background-color: var(--background-color-navbar);
+    font-family: var(--font-navbar);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo img {
+    height: 35px;
+    padding-left:10px;
+}
+
+/* Link centrali */
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navbar-links .abbonati-btn {
+    display: none;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* Destra */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.navbar-right i {
+    font-size: 14px;
+    color: var(--color-text-white);
+}
+
+
 .btn-abbonati {
-    background-color: #ffeb00; /* Giallo */
-    color: black;              /* Testo nero */
-    padding: 0.5rem 1rem;      /* Spaziatura interna */
-    border: none;              /* Nessun bordo */
-    border-radius: 6px;        /* Bordi arrotondati */
-    font-weight: bold;         /* Testo in grassetto */
-    text-decoration: none;     /* Nessuna sottolineatura */
-    display: inline-block;
+    background-color: var(--abbonati-btn-background-color);
+    color: black;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .btn-abbonati:hover {
-    background-color: #e6d500; /* Giallo leggermente più scuro al passaggio del mouse */
+    background-color: #e6d500;
+}
+.navbar-links .abbonati-btn .btn-abbonati {
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #ffeb00;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar-links .abbonati-btn .btn-abbonati:hover {
+    background-color: #e6d500;
+}
+
+/* Comportamento normale: navbar-links allineati a sinistra */
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* Max 1110px */
+@media (max-width: 1110px) {
+    /*menu*/
+    .hamburger-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    /*LINK*/
+    .custom-navbar {
+        background-color: var(--color-navbar-small);
+    }
+
+    /* Nascondi completamente il blocco logo */
+    .navbar-logo,
+    .navbar-right {
+        display: none !important;
+    }
+    .navbar-logo img{
+        padding-left: 0;
+    }
+    /* Nasconde le icone social */
+    .navbar-right i {
+        display: none;
+    }
+
+    /* Nasconde "Accedi" */
+    .navbar-links .accedi {
+        display: none;
+    }
+
+    /* Nasconde le icone davanti ai testi */
+    .navbar-links a i {
+        display: none;
+    }
+
+    /* Centra e distribuisce equamente i link */
+    .navbar-links {
+        justify-content: space-between;
+        flex: 1;
+        /* trasla a sinistra di 20px */
+        transform: translateX(-40px);
+
+    }
+    .navbar-right {
+        display: none;
+    }
+
+    .navbar-links {
+        flex: 1;
+        justify-content: space-evenly;
+    }
+
+    .navbar-links .abbonati-btn {
+        display: flex;
+    }
+}
+@media (max-width: 828px) {
+    .navbar-links .edizione {
+        display: none !important;
+    }
 }
 
 
-@media (max-width: 606px) {
-    .my-navbar{
-        width:100%;
-    }
+
+/* Impedisce a capo */
+.custom-navbar,
+.navbar-links,
+.navbar-right {
+    flex-shrink: 0;
 }

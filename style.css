@@ -1,5 +1,7 @@
 :root{
     --background-color-navbar: #1a3b70;
+    --color-navbar-small: #0c1a32;
+    --text-color-navbar: #073e7c;
     --background-color: #f7f7f7;
     --background-article: #ffffff;
     --category-color: black;
@@ -12,9 +14,14 @@
     --most-read-color: #1a3b70;
     --color-box-adv: #e7e4e4;
     --color-video-background: #00023D;
-    --text-color-navbar: #073e7c;
     --other-category-text: black;
     --text-color-footer:#073e7c;
+    --color-text-soft-dark: #302a2a;
+    --abbonati-btn-background-color: #ffeb00;
+    --font-navbar: sans-serif;
+    --font-title:'Playfair Display', serif;
+    --font-title-most-read: 'DM Sans', sans-serif;
+    --font-title-category: 'DM Sans', sans-serif;
 }
 
 
@@ -80,26 +87,23 @@
     gap: 30px;
     margin: 0 auto;
 }
-.container-category.grey {
-    background-color: var(--background-color);
-}
 
 .container-category.blue {
     background-color: var(--background-color-navbar);
-    .section-title{
+    .section-header .section-title{
         color: var(--color-text-white);
     }
-    .icon{
+    .section-header .icon{
         color: var(--color-text-white);
     }
 }
 .container-category.grey {
-    background-color: var(--background-color-navbar);
-    .section-title{
+    background-color: var(--background-color);
+    .section-header .section-title{
         color: var(--color-text-black);
     }
-    .icon{
-        color: var(--color-text-white);
+    .section-header .icon{
+        color: var(--color-text-black);
     }
 }
 
@@ -293,7 +297,7 @@
     margin: 0 0 1rem;
     font-size: 35px;
     font-weight: bold;
-    font-family: DM sans, sans-serif;
+    font-family: var(--font-title);
 }
 .featured-article .featured-author {
     margin: 0 0 1rem;
@@ -354,6 +358,7 @@
     justify-content: center;
 }
 .sub-title {
+    font-family: var(--font-title);
     font-size: 21px;
     margin: 0;
 }
@@ -394,7 +399,7 @@
     border-radius: 3px;
     margin-left: 10px;
     width: auto;
-    height: 207px; /* aumentata rispetto a prima */
+    height: 80%; /* aumentata rispetto a prima */
     overflow: visible; /* importante per mostrare la parte traslata */
     padding-bottom: 0;
 }
@@ -431,10 +436,11 @@
     font-weight: bold;
     display: block;
     color: var(--category-color);
-    margin-bottom: 0.25rem;
-
+    margin-bottom: 5px;
+    margin-top:10px ;
 }
 .most-read-item .info .title {
+    font-family: var(--font-title-most-read);
     font-size: 17px;
     font-weight: bold;
     line-height: 1.2;
@@ -474,8 +480,10 @@
 }
 
 .category-category {
+    font-family: var(--font-title-category);
     font-size: 13px;
-    margin-bottom: 16px;
+    padding-top:5px;
+    margin-bottom: 10px;
     padding-left: 8px;
 }
 
@@ -505,6 +513,7 @@
     color: white;
 }
 .category-title {
+    font-family: var(--font-title);
     font-size: 17px;
     font-weight: bold;
     color: var(--autor-color);
@@ -519,6 +528,9 @@
 .container-category.articoli-misto .article-col {
     flex: 0 0 calc(33.333% - 13.33px); /* 3 colonne */
     max-width: calc(33.333% - 13.33px);
+}
+.article-col .most-read-item .info .category .title{
+    font-family: var(--font-title-most-read);
 }
 
 .container-category.video {
@@ -551,7 +563,7 @@
     display: block;
     padding-left: 10px;
     font-size: 0.875rem;
-    color: gray;
+    color: var(--color-text-soft-dark);
 }
 .most-read-item.custom-article{
     .video-duration{
@@ -562,7 +574,11 @@
 
 
 
-
+@media(min-width: 1110px) {
+    .most-read-adv{
+        height: 207px;
+    }
+}
 @media (max-width: 1110px) {
 
     .container-main {
@@ -668,7 +684,7 @@
 }
 @media (min-width: 828px) {
     .scroll-arrow {
-        display: none; /* Nasconde la freccia su desktop */
+        display: none;!important; /* Nasconde la freccia su desktop */
     }
 }
 @media (max-width: 606px) {
@@ -677,16 +693,16 @@
     }
     .container-main {
         width: 100%;
-        padding: 0 0 10px 0;
+        padding: 0 0 10px 10px;
         margin-left: 0px;
     }
     .container-categories{
         width: 100%;
-        padding: 0 0 20px;
+        padding: 0 0 0;
         margin-left: 0px;
     }
     .container-category{
-        padding-bottom: 10px;
+        padding-bottom: 20px;
 
     }
     .main-article {
@@ -719,16 +735,16 @@
     .overflow-scroll-wrapper::-webkit-scrollbar {
         display: none;
     }
-
     .menu-secondario {
         display: inline-flex;
         gap: 10px;
         flex-wrap: nowrap;
         margin: 10px 0 0;
     }
-
     .menu-secondario a {
         flex-shrink: 0;
     }
+
+
 }
 

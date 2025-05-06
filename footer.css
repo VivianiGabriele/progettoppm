@@ -39,9 +39,13 @@
     font-size: 18px;
     margin-right: 5px;
 }
+.footer-right .bi {
+    color:var(--text-color-footer);
+}
 
 .abbonati {
-    background-color: #007BFF;
+    font-weight: bold;
+    background-color: var(--background-color-navbar);
     color: white !important;
     padding: 8px 14px;
     border-radius: 4px;
