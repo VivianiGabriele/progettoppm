@@ -20,6 +20,7 @@
     top: 48px; /* altezza navbar */
     left: 0;
     width: 100%;
+    height: 100vh;
     background-color: #0c1a32;
     color: white;
     padding: 2rem;
@@ -30,7 +31,7 @@
 
 .mobile-menu .menu-column {
     flex: 1 1 200px; /* base 200px, si adatta se meno spazio */
-    min-width: 200px;
+    min-width: 50px;
 }
 
 .mobile-menu .menu-column strong {
@@ -59,7 +60,7 @@
     position: fixed;
     top: 48px; /* sotto la navbar */
     left: 0;
-    width: 80vw; /* 80% della larghezza dello schermo */
+    width: 80vw; /*  80% della larghezza dello schermo */
     height: calc(100vh - 48px);
     background-color: #0c1a32;
     color: white;
@@ -67,7 +68,6 @@
     z-index: 9998;
     flex-wrap: wrap;
     gap: 2rem;
-
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
