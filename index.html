@@ -8,14 +8,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Viviani Gazzettino</title>
-    /*link font*/
+    <!-- Favicon -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Merriweather&display=swap" rel="stylesheet">
 
-    /*link file css*/
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="navbar.css">
+
+    <!-- javascript file -->
+    <script src="javascript.js" defer></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -24,14 +27,12 @@
 
 <!-- CONTAINER MENù -->
 <nav class="custom-navbar">
-    <!-- Hamburger Menu (solo mobile) -->
     <div class="hamburger-menu">
         <i class="bi bi-list"></i>
     </div>
 
     <!-- Menu a comparsa -->
     <div class="mobile-menu">
-        <div class="mobile-menu-overlay"></div>
         <div class="menu-column">
             <strong>Categoria 1</strong>
             <ul>
@@ -44,10 +45,10 @@
         <div class="menu-column">
             <strong>Categoria 2</strong>
             <ul>
-                <li><a href="#">Sottoarticolo A</a></li>
-                <li><a href="#">Sottoarticolo B</a></li>
-                <li><a href="#">Sottoarticolo C</a></li>
-                <li><a href="#">Sottoarticolo D</a></li>
+                <li><a href="#">Sottoarticolo 1</a></li>
+                <li><a href="#">Sottoarticolo 2</a></li>
+                <li><a href="#">Sottoarticolo 3</a></li>
+                <li><a href="#">Sottoarticolo 4</a></li>
             </ul>
         </div>
         <div class="menu-column">
@@ -74,11 +75,11 @@
         <img src="https://placehold.co/66x30?text=Logo" alt="Logo navbar">
     </div>
 
-    <ul class="navbar-links">
-        <li class="link edizione"><a href="#"><i class="bi bi-newspaper"></i><span>Edizione Digitale</span></a></li>
-        <li class="link"><a href="#"><i class="bi bi-envelope"></i><span>Newsletter</span></a></li>
-        <li class="link"><a href="#"><i class="bi bi-whatsapp"></i><span>Segnala</span></a></li>
-        <li class="link"><a href="#"><span>Necrologie</span></a></li>
+    <ul class="navbar-links navbar-sx">
+        <li class="link edizione have-border"><a href="#"><i class="bi bi-newspaper"></i><span>Edizione Digitale</span></a></li>
+        <li class="link have-border"><a href="#"><i class="bi bi-envelope"></i><span>Newsletter</span></a></li>
+        <li class="link have-border"><a href="#"><i class="bi bi-whatsapp"></i><span>Segnala</span></a></li>
+        <li class="link have-border"><a href="#"><span>Necrologie</span></a></li>
         <li class="link accedi"><a href="#"><span>Accedi</span></a></li>
         <li class="link abbonati-btn"><a href="#" class="btn-abbonati">Abbonati</a></li>
     </ul>
@@ -263,7 +264,7 @@
                 <i class="bi bi-caret-right-square-fill icon"></i>
                 <h2 class="section-title">Le nostre esclusive</h2>
             </div>
-            <div class="categories-list">
+            <div class="categories-list position-relative">
                 <article class="category-article">
                     <img src="https://picsum.photos/400" alt="Articolo 1" class="img-fluid">
                     <div class="category-category">IL DIBATTITO</div>
@@ -600,7 +601,7 @@
                         <img src="https://picsum.photos/400" alt="Video 1" class="img-fluid">
                         <i class="bi bi-play-circle-fill play-icon"></i>
                     </div>
-                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur.</h3>
+                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                     <span class="video-duration">3:12</span>
                 </article>
                 <article class="category-article video-article">
@@ -608,7 +609,7 @@
                         <img src="https://picsum.photos/410" alt="Video 2" class="img-fluid">
                         <i class="bi bi-play-circle-fill play-icon"></i>
                     </div>
-                    <h3 class="category-title">Consectetur adipiscing elit. Proin eu.</h3>
+                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                     <span class="video-duration">5:47</span>
                 </article>
                 <article class="category-article video-article">
@@ -616,7 +617,7 @@
                         <img src="https://picsum.photos/400" alt="Video 1" class="img-fluid">
                         <i class="bi bi-play-circle-fill play-icon"></i>
                     </div>
-                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur.</h3>
+                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                     <span class="video-duration">3:12</span>
                 </article>
                 <article class="category-article video-article">
@@ -624,7 +625,7 @@
                         <img src="https://picsum.photos/410" alt="Video 2" class="img-fluid">
                         <i class="bi bi-play-circle-fill play-icon"></i>
                     </div>
-                    <h3 class="category-title">Consectetur adipiscing elit. Proin eu.</h3>
+                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
                     <span class="video-duration">5:47</span>
                 </article>
             </div>
@@ -648,7 +649,7 @@
                         <img src="https://picsum.photos/410" alt="Video 2" class="img-fluid">
                         <i class="bi bi-play-circle-fill play-icon"></i>
                     </div>
-                    <h3 class="category-title">Consectetur adipiscing elit. Proin eu.</h3>
+                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur.</h3>
                     <span class="video-duration">5:47</span>
                 </article>
                 <article class="category-article video-article">
@@ -664,7 +665,7 @@
                         <img src="https://picsum.photos/410" alt="Video 2" class="img-fluid">
                         <i class="bi bi-play-circle-fill play-icon"></i>
                     </div>
-                    <h3 class="category-title">Consectetur adipiscing elit. Proin eu.</h3>
+                    <h3 class="category-title">Lorem ipsum dolor sit amet, consectetur.</h3>
                     <span class="video-duration">5:47</span>
                 </article>
             </div>
@@ -722,19 +723,6 @@
         </div>
     </footer>
 </div>
-
-
-<script>
-document.getElementById('scroll-right').addEventListener('click', function () {
-const menu = document.querySelector('.overflow-scroll-wrapper');
-menu.scrollBy({ left: 200, behavior: 'smooth' });
-});
-</script>
-<script>
-    document.querySelector('.hamburger-menu').addEventListener('click', function () {
-        document.querySelector('.mobile-menu').classList.toggle('active');
-    });
-</script>
 
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>

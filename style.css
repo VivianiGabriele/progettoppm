@@ -18,6 +18,7 @@
     --text-color-footer:#073e7c;
     --color-text-soft-dark: #302a2a;
     --abbonati-btn-background-color: #ffeb00;
+    --color-border-nav: #ffffff;
     --font-navbar: sans-serif, Arial, sans-serif;
     --font-title:'Playfair Display', serif, Arial, sans-serif;
     --font-title-most-read: 'DM Sans', sans-serif, Arial, sans-serif;
@@ -37,7 +38,7 @@
     background-color: var(--background-color); /* colore di sfondo personalizzato */
     padding-left: 70px;
     padding-right: 70px;
-    margin: 20px auto 0;
+    margin: 50px auto 0;
 }
 .container-topbar .top{
     display: flex;
@@ -118,6 +119,7 @@
         color: var(--color-text-black);
     }
 }
+
 
 
 
@@ -267,7 +269,7 @@
 .section-title {
     text-decoration-color: var(--category-color);
     padding-bottom: 10px;
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: bold;
     padding-top: 20px;
     text-decoration: none;
@@ -322,7 +324,7 @@
     margin: 0 auto;
 }
 
-/* Sezione Testo identificatore container logo-testo es > Primo piano */
+/* Sezione Testo identificatore categoria es : Primo piano */
 .section-header {
     display: flex;
     align-items: center;
@@ -332,7 +334,9 @@
     padding-top: 5px;
     padding-bottom: 0px;
 }
-
+.container-category .section-header{
+    padding-top:15px;
+}
 
 /* SOTTO ARTICOLI PRIMO PIANO */
 .sub-articles {
@@ -406,7 +410,7 @@
     border-radius: 3px;
     margin-left: 10px;
     width: auto;
-    height: 80%; /* aumentata rispetto a prima */
+    height: 80%;
     overflow: visible; /* importante per mostrare la parte traslata */
     padding-bottom: 0;
 }
@@ -644,13 +648,11 @@
         justify-content: center;
     }
 
-
-
 }
 @media (max-width: 828px) {
     .container-main {
         max-width: 606px; /* Ulteriore restringimento */
-        padding: 0 15px;
+        padding: 0 15px
     }
     .container-topbar{
         max-width: 606px;
@@ -724,8 +726,7 @@
     }
     .container-main {
         width: 100%;
-        padding: 0 0 10px 10px;
-        margin-left: 0px;
+        padding: 0 0 10px 20px;
     }
     .container-categories{
         width: 100%;
@@ -742,6 +743,9 @@
     }
     .most-read {
         width: 100%;
+    }
+    .most-read-adv{
+        margin-left: 0;
     }
     .container-topbar .row.top {
         display: none;
@@ -775,7 +779,18 @@
     .menu-secondario a {
         flex-shrink: 0;
     }
+    .featured-article .featured-title {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .section-header .section-title{
+        font-size: 25px;
+    }
+    .container-category .section-title{
+        font-size: 20px;
+    }
 
 
 }
-
